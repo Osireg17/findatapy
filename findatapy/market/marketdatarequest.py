@@ -561,7 +561,7 @@ class MarketDataRequest:
     def date_parser(self, date):
         if isinstance(date, str):
 
-            date1 = datetime.datetime.utcnow()
+            date1 = datetime.datetime.now(datetime.UTC)
 
             if date == "midnight":
                 date1 = datetime.datetime(date1.year, date1.month, 
